@@ -1,0 +1,11 @@
+<!--components/menus.twig-->
+{% if menu %}
+  <ul>
+      {% for item in items %}
+        <li>
+        {#  <li class="{{ item.classes | join(' ') }}"> // use this to add WP classes #}
+            <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+  </ul>
+{% endif %}

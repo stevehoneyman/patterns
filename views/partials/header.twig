@@ -1,0 +1,7 @@
+<!--partials/header.twig-->
+<header>
+	<nav class="main-nav">
+		<button class="navicon">Menu</button>
+		{% include 'components/menu.twig' with {'items': menu.get_items} %}
+	</nav>
+</header>

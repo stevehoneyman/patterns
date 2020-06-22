@@ -1,0 +1,20 @@
+{% extends 'base.twig' %}
+{% block content %}
+
+	<h1>{{ post.title }}</h1>
+
+	<div class="video">
+
+		<!-- basic vid -->
+		<h2>Basic Video</h2>
+        <div class="video-container">
+			<iframe src="https://www.youtube.com/embed/{{ post.video }}" frameborder="0" allowfullscreen></iframe>
+				{% if post.text %}
+					<span class="title">{{ post.text }}</span>
+				{% endif %}
+			</div>
+		</div>
+
+	</div>
+
+{% endblock %}

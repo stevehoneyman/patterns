@@ -1,0 +1,19 @@
+{% extends 'base.twig' %}
+  {% block content %}
+
+    <!-- index.twig -->
+    <code>this is single-feature.twig</code>
+
+    <h2>{{ post.post_title }}</h2>
+    <p>{{ post.content }}</p>
+
+    {# content from ACF #}
+    <p><em>{{ post.featured_text_test }}</em></p>
+
+    {% if post.get_field('featured_highlight_test') %}
+      <img src="{{ Image(post.featured_image_test).src | resize(600) }}" style="border-bottom: 5px solid red;">
+      {% else %}
+      <img src="{{ Image(post.featured_image_test).src | resize(600) }}" style="border-bottom: none;">
+    {% endif %}
+
+  {% endblock %}

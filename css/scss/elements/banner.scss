@@ -1,0 +1,31 @@
+/* banner
+----------------------------------------------------------------------------- */
+
+.banner {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 100%;
+	padding-top: 46.25%;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding-top: inherit;
+		mix-blend-mode: darken;
+	}
+
+	.headline {
+		padding: 3rem 0;
+		text-align: center;
+		color: #fff;
+		background: rgba(0, 0, 0, .5);
+	}
+} // close .banner

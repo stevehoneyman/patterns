@@ -1,0 +1,38 @@
+{% extends 'base.twig' %}
+{% block content %}
+
+	<h1>{{ post.title }}</h1>
+	<p>{{ post.content }}</p>
+
+	<div class="sliders">
+
+		<!-- basic slider -->
+		<h2>Basic</h2>
+        <div class="basic-slider">
+			{% for item in post.meta('basic_slider') %}
+				<div class="slide" style="background-image: url('{{ Image(item.image).src }}');">
+					{% if item.text %}
+						<span class="title">{{ item.text }}</span>
+					{% endif %}
+				</div>
+			{% endfor %}
+		</div>
+
+		<!-- fade slider -->
+		<h2>Fade</h2>
+		<div class="fade-slider">
+			{% for item in post.meta('fade_slider') %}
+				<img src="{{ Image(item.image).src }}" />
+			{% endfor %}
+		</div>
+
+		<!-- multiple slider -->
+		<h2>Multiple</h2>
+		<div class="multiple-slider">
+			{% for item in post.meta('multiple_slider') %}
+				<img src="{{ Image(item.image).src }}" />
+			{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}

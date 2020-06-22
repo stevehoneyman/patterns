@@ -1,0 +1,13 @@
+{% extends 'base.twig' %}
+{% block content %}
+
+	<h1>{{ post.title }}</h1>
+	<p>{{ post.content }}</p>
+
+	{# -- kept for reference as working both on this page and banners.twig
+		<div class="banner" style="background-image: url('{{ Image(post.banner_image).src }}')">
+			<h2>{{ post.banner_text }}</h2>
+		</div>
+	#}
+
+{% endblock %}

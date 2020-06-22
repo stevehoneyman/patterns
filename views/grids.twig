@@ -1,0 +1,29 @@
+{% extends 'base.twig' %}
+{% block content %}
+	<div class="grids">
+
+		<h1>{{ post.title }}</h1>
+
+		<h2>Basic text grid</h2>
+		<div class="grid-container">
+			{% for item in post.meta('text_grid') %}
+				<div class="grid text-item {{ item.highlighted == 'pink' ? 'highlighted' }}">
+					<h2 class="title">{{ item.title }}</h2>
+					<div class="description">{{ item.description }}</div>
+					<span class="info">{{ item.info }}</span>
+				</div>
+			{% endfor %}
+		</div>
+
+		<h2>Basic image text grid</h2>
+		<div class="grid-container">
+			{% for item in post.meta('image_text_grid') %}
+				<div class="grid image-text-item">
+					<img src="{{ Image(item.image).src }}" />
+					<div class="description">{{ item.description }}</div>
+				</div>
+			{% endfor %}
+		</div>
+
+	</div>
+{% endblock %}

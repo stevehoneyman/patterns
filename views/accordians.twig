@@ -1,0 +1,17 @@
+{% extends 'base.twig' %}
+{% block content %}
+	<div class="accordians">
+
+		<h1>{{ post.title }}</h1>
+		<h2>Basic FAQ</h2>
+
+		<div class="faqs">
+			{% for item in post.meta('faqs') %}
+				<div class="faq">
+					<button class="faq-question">{{ item.title }}</button>
+					<div class="faq-answer">{{ item.description| wpautop }}</div>
+				</div>
+			{% endfor %}
+
+	</div>
+{% endblock %}

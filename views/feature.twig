@@ -1,0 +1,15 @@
+{% extends 'base.twig' %}
+  {% block content %}
+
+    <!-- index.twig -->
+    <code>this is feature.twig</code>
+
+    <h2>{{ post.post_title }}</h2>
+    <p>{{ post.content }}</p>
+
+    {% for post in posts %}
+      <h2><a href="{{ post.link }}">{{ post.title }}</a></h2>
+    {% endfor %}
+
+
+  {% endblock %}

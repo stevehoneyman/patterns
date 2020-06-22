@@ -1,0 +1,28 @@
+/* navigation
+----------------------------------------------------------------------------- */
+
+nav {
+	margin-bottom: 1rem;
+
+	ul {
+		display: none;
+
+		li {
+			margin-right: 1rem;
+		}
+
+		&.show {
+			display: block;
+		}
+	}
+
+	@include mq(600px) {
+		.navicon {
+			display: none;
+		}
+
+		ul {
+			display: flex;
+		}
+	}
+} // close nav

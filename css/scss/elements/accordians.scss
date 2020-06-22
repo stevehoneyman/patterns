@@ -1,0 +1,47 @@
+/* banner
+----------------------------------------------------------------------------- */
+.accordians {
+
+	h2 {
+		margin-bottom: 1rem;
+	}
+
+	.faq {
+		margin-bottom: .5rem;
+	}
+
+	.faq-question {
+		display: block;
+		width: 100%;
+		padding: 1rem 2rem 1rem .5rem;
+		border: 1px solid #404040;
+		border-top-right-radius: 25px;
+		border-bottom-right-radius: 5px;
+		font-size: 1rem;
+		font-weight: bold;
+		text-align: left;
+		color: $white;
+		background: #404040;
+		-webkit-appearance: none;
+
+		@include mq(360px) {
+			width: 50%;
+			max-width: 400px;
+		}
+	}
+
+	.faq-answer {
+		max-height: 0;
+		overflow: hidden;
+		margin: 1rem 0;
+
+		@include mq(360px) {
+			max-width: 600px;
+		}
+	}
+
+	.show {
+		max-height: 1000px;
+		transition: 1000ms;
+	}
+}
